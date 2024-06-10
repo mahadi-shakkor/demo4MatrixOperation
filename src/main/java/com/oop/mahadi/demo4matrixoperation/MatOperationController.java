@@ -146,6 +146,9 @@ public class MatOperationController {
             }
 
         }
+        if (ComboxFxid.getValue().equals("inv")){
+            textAreaFxidForshowalll.setText(m1.inv().toString());
+        }
 
     }
 
