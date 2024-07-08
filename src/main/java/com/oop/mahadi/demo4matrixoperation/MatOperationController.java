@@ -7,6 +7,7 @@ import javafx.scene.control.*;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.Random;
+import java.util.Scanner;
 
 public class MatOperationController {
 
@@ -195,6 +196,29 @@ public class MatOperationController {
         } catch (Exception e) {
             // Handle the exception, for example by printing it out
             e.printStackTrace();
+        }
+
+
+
+    }
+
+    @FXML
+    public void ShowFromsavedTextF(ActionEvent actionEvent) {
+        try {
+            String St="";
+            File f=new File("hello.txt");
+            Scanner s=new Scanner(f);
+            while (s.hasNextLine()){
+                St+=s.nextLine()+"\n";
+
+
+            }
+            s.close();
+            textAreaFxidForshowalll.setText(St);
+
+        }catch (Exception e){
+
+
         }
 
 

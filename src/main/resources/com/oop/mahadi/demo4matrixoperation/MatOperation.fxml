@@ -29,5 +29,6 @@
       <Button layoutX="560.0" layoutY="127.0" mnemonicParsing="false" onAction="#executeButtonOnaction" text="Execute" />
       <Button layoutX="166.0" layoutY="2.0" mnemonicParsing="false" onAction="#newM1buttononaction" prefHeight="25.0" prefWidth="99.0" text="New M1" />
       <Button layoutX="598.0" layoutY="69.0" mnemonicParsing="false" onAction="#saveTextF" text="Save to text file" />
+      <Button layoutX="576.0" layoutY="101.0" mnemonicParsing="false" onAction="#ShowFromsavedTextF" text=" show from text file" />
    </children>
 </AnchorPane>
