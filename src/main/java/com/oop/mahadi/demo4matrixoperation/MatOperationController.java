@@ -120,6 +120,7 @@ public class MatOperationController {
 
 
     }
+    String
 
     @FXML
     public void executeButtonOnaction(ActionEvent actionEvent) {
@@ -163,6 +164,13 @@ public class MatOperationController {
         m1RowFxid.clear();
         M1CollumFxid.clear();
         ValuFXid.clear();
+
+    }
+
+    @FXML
+    public void saveTextF(ActionEvent actionEvent) {
+
+
 
     }
 }
