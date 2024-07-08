@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.util.Random;
 
 public class MatOperationController {
@@ -120,13 +122,15 @@ public class MatOperationController {
 
 
     }
-    String
+    String s="";
 
     @FXML
     public void executeButtonOnaction(ActionEvent actionEvent) {
 
+
         if (ComboxFxid.getValue().equals("add")){
            textAreaFxidForshowalll.setText( m1.add(m2).toString());
+
         }
         if (ComboxFxid.getValue().equals("sub")){
             textAreaFxidForshowalll.setText(m1.sub(m2).toString());
@@ -169,6 +173,29 @@ public class MatOperationController {
 
     @FXML
     public void saveTextF(ActionEvent actionEvent) {
+        s = textAreaFxidForshowalll.getText();
+        try {
+            File f = new File("hello.txt");
+
+            // Use FileWriter with the append flag set to true
+            if (f.exists()){
+                FileWriter fw = new FileWriter(f, true);
+                fw.write(s);
+                fw.close();
+
+            }
+            else {
+                FileWriter fw = new FileWriter(f,false);
+                fw.write(s);
+                fw.close();
+
+
+            }
+
+        } catch (Exception e) {
+            // Handle the exception, for example by printing it out
+            e.printStackTrace();
+        }
 
 
 
